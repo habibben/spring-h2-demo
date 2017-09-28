@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS PERSON;
+
+CREATE TABLE  PERSON (
+    ID bigint(20) NOT NULL AUTO_INCREMENT,
+    NAME varchar(200) ,
+    FULL_NAME varchar(200),
+
+    PRIMARY KEY (ID)
+);
