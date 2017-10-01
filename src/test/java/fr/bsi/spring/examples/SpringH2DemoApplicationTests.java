@@ -12,6 +12,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ActiveProfiles(value = "test")
@@ -24,7 +26,8 @@ public class SpringH2DemoApplicationTests {
 	public void contextLoads() {
 
 		List<Person> all = personDao.findAll();
-		Assertions.assertThat(all).isNotEmpty();
+
+		assertThat(all).isNotEmpty();
 	}
 
 }
